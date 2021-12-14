@@ -39,6 +39,10 @@ function down(){
         index = 0;
     }
     document.querySelector('.image').style.backgroundImage = `url(${items[index]})`;
+    document.querySelector('.text').innerHTML = `
+                    <h4>${title[index]}</h4>
+                    <p>${text[index]}</p>`;
+
     document.querySelector(`.slider-img${index}`).className += " selected";
     document.querySelector(`.slider-img${index-1}`).classList.remove("selected");
 }
@@ -50,6 +54,10 @@ function up(){
         index = 4;
     }
     document.querySelector('.image').style.backgroundImage = `url(${items[index]})`;
+    document.querySelector('.text').innerHTML = `
+                    <h4>${title[index]}</h4>
+                    <p>${text[index]}</p>`;
+
     document.querySelector(`.slider-img${index}`).className += " selected";
     document.querySelector(`.slider-img${index+1}`).classList.remove("selected");
 }
